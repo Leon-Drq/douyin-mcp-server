@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-eb-garamond: "EB Garamond", Georgia, serif;
+  --font-ibm-plex-mono: "IBM Plex Mono", "Courier New", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  background-color: #F8F7F3;
+  color: #1A1A1A;
+  font-family: var(--font-eb-garamond);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle grid texture */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(#E8E8E8 1px, transparent 1px),
+    linear-gradient(90deg, #E8E8E8 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+}
+
+textarea, input {
+  font-family: var(--font-ibm-plex-mono);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
